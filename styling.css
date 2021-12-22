@@ -45,65 +45,6 @@ nav ul li a {
     text-align: left;
 }
 
-/*header {
-    width: 100%;
-    height: 120px;
-}
-
-header .top-header {
-    padding: 20px 50px;
-    
-}
-
-header .header-title {
-    float: left;
-
-}
-
-header .navbar {
-    float: right;
-    padding: 10px 50px;
-    border-radius: 20px;
-    background-color: rgb(58, 55, 55);
-       
-}
-
-.navbar ul li {
-    display: inline;
-    padding: 8px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    width: 20%; 
-    text-align: center;
-    font-weight: bold;
-}
-
-h1, h4 {
-    margin:0;
-    padding:0;
-}
-
-/*body {
-    font-family: Helvetica, Arial, sans-serif;
-}*/
-
-#introSection {
-    background: linear-gradient(#d1d1d3, #fafafa);
-}
-
-.phonesPhoto {
-    float: left;
-}
-
-.pageDescription h1 {
-    font-size: 2.5em;
-}
-
-
 
 
 
