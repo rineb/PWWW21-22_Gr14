@@ -91,7 +91,7 @@ nav ul li a:hover {
 .slider {
     position: absolute;
     bottom: 0;
-    padding: 0.7em;
+    padding: 0.7em 1.5em;
     background-color: hsla(187, 68%, 60%, 0.712);
     width: 100%;
     box-sizing: border-box;
@@ -100,7 +100,98 @@ nav ul li a:hover {
 .slider p {
     color: white;
     margin: 0;
+    font-size: 1.2em;
 }
+
+.section-application {
+    background-color: white;
+    overflow: auto;
+    padding: 1.5em 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-application h2 {
+    font-size: 1.7em;
+}
+
+.section-application p {
+    font-size: 1.2em;
+}
+
+.application-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.latest-tweets h2 {
+    margin: 0;
+}
+
+.latest-tweets p {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.application {
+    max-width: 25%;    
+    text-align: center;
+}
+
+.application img {
+    max-width: 100%;
+    max-height: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.app-store img {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1.5em;
+}
+
+.section-feature {
+    padding: 0 0.75em 1.5em 0.75em;
+    overflow: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 31.4%;
+    overflow: auto;   
+    margin: 0.75em;
+    border-bottom: 1px solid black;
+}
+
+.feature-header img {
+    float: left;
+    max-width: 3em;
+}
+
+.feature-header h3 {
+    padding: 1em 3em;
+    margin: 0;
+}
+
+.feature-description p {
+    margin: 0;
+    margin-bottom: 0.75em;
+}
+
+
+
+
+
+
+
+
 
 
 
