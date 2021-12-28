@@ -4,11 +4,13 @@ body {
 }
 
 header {
-    padding: 1em;
+    padding: 1em 1.5em;
     overflow: auto;
+    background-color: white;
 }
 
 .header-title {
+    color:gray;
     max-width: 30%;
     float: left;
 }
@@ -18,10 +20,11 @@ header {
 }
 
 nav {
+    margin-top: 0.3em;
     float: right;
     border-radius: 1em;
     background-color: rgb(58, 55, 55);
-    padding: 1em 1em 1em 1em;
+    padding: 0.8em 0em;
 
 }
 
@@ -33,7 +36,8 @@ nav ul {
 
 nav ul li {
     display: inline;
-    padding-right: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     
 }
 
@@ -44,6 +48,63 @@ nav ul li a {
     text-transform: uppercase;
     text-align: left;
 }
+
+nav ul li a:hover {
+    color: lightgray;
+}
+
+.description-section {
+    background: linear-gradient(#d1d1d3, #fafafa);
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}
+
+.description-photo {
+    overflow: auto;
+}
+
+.phones-photo {
+    float: left;
+    max-width: 45%;
+}
+
+.phones-photo img {
+    max-width: 100%;
+}
+
+.page-description {
+    max-width: 55%;
+    float: right;
+}
+
+.page-description h1 {
+    margin-top: 3em;
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+.page-description p {
+    font-size: 1em;
+}
+
+.slider {
+    position: absolute;
+    bottom: 0;
+    padding: 0.7em;
+    background-color: hsla(187, 68%, 60%, 0.712);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slider p {
+    color: white;
+    margin: 0;
+}
+
+
+
+
 
 
 
