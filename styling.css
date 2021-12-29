@@ -185,7 +185,120 @@ nav ul li a:hover {
     margin-bottom: 0.75em;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+footer {
+  padding: 2em;
+  border-top: 5px solid #505050;
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.up {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer-logo {
+  width: 30%;
+  font-size: 300%;
+  color: rgb(68, 67, 67);
+}
+.contact-social {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.contact-info {
+  padding-left: 2em;
+  border-left: 2px solid #505050;
+}
+.sm-form {
+  color: white;
+  width: 50%;
+  font-size: 2em;
+}
+p {
+  color: white;
+  margin: 0em;
+  padding: 0em;
+}
+.contact-title1 {
+  color: #505050;
+}
+.contact-title {
+  color: #505050;
+}
+p.contact-title {
+  padding-top: 1em;
+}
+.Copyright {
+  
+  margin-top: 15px;
+  bottom: 1em;
+  width: 100%;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.PLeft {
+  color: gray;
+}
+.PRight {
+  color: gray;
+}
+a {
+  position: relative;
+  bottom: 0.25em;
+  font-size: 0.5em;
+  color: rgb(23, 186, 227);
+  text-decoration: none;
+}
+.facebook {
+  position: relative;
+  left: 1em;
+}
+.twitter {
+  position: relative;
+  left: 3em;
+}
+.linkedin {
+  position: relative;
+  left: 1.5em;
+}
+.email {
+  height: 2em;
+  width: 70%;
+  border: none;
+  border-radius: 0.5em;
+  background-color: rgb(58, 55, 55);
+}
+input[type="text"]::placeholder {
+  padding-left: 1em;
+}
+label {
+  font-size: small;
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+.submit {
+  height: 2em;
+  color: white;
+  width: 20%;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0.5em;
+  background-color: rgb(58, 55, 55);
+}
+form {
+  padding-top: 1.5em;
+}
 
 
 
