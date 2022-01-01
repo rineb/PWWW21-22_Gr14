@@ -91,25 +91,10 @@ nav ul li a:hover {
 .slider {
     position: absolute;
     bottom: 0;
-    padding: 0em 1.5em;
+    padding: 0.7em 1.5em;
     background-color: hsla(187, 68%, 60%, 0.712);
     width: 100%;
     box-sizing: border-box;
-}
-.mySlides-fade {
-  color: white;
-  float: left;
-  width: 70%;
-  margin: 0;
-  padding: 0.5em;
-  font-size: 1.5em;
-}
-.Slide {
-color: white;
-float: right;
-width: 30%;
-margin: 0;
-font-size: 1.2em;
 }
 
 .slider p {
@@ -214,46 +199,55 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
 .footer-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .footer-logo {
   width: 30%;
   font-size: 300%;
   color: rgb(68, 67, 67);
 }
+
 .contact-social {
   width: 70%;
   display: flex;
   justify-content: space-around;
 }
+
 .contact-info {
   padding-left: 2em;
   border-left: 2px solid #505050;
 }
+
 .sm-form {
   color: white;
   width: 50%;
   font-size: 2em;
 }
+
 footer p {
   color: white;
   margin: 0em;
   padding: 0em;
 }
+
 .contact-title1 {
   color: #505050;
 }
+
 .contact-title {
   color: #505050;
 }
+
 p.contact-title {
   padding-top: 1em;
 }
+
 .Copyright {
-  
   margin-top: 15px;
   bottom: 1em;
   width: 100%;
@@ -262,12 +256,15 @@ p.contact-title {
   justify-content: space-between;
   padding-top: 20px;
 }
+
 .PLeft {
   color: gray;
 }
+
 .PRight {
   color: gray;
 }
+
 a {
   position: relative;
   bottom: 0.25em;
@@ -275,18 +272,22 @@ a {
   color: rgb(23, 186, 227);
   text-decoration: none;
 }
+
 .facebook {
   position: relative;
   left: 1em;
 }
+
 .twitter {
   position: relative;
   left: 3em;
 }
+
 .linkedin {
   position: relative;
   left: 1.5em;
 }
+
 .email {
   height: 2em;
   width: 70%;
@@ -294,14 +295,17 @@ a {
   border-radius: 0.5em;
   background-color: rgb(58, 55, 55);
 }
+
 input[type="text"]::placeholder {
   padding-left: 1em;
 }
+
 label {
   font-size: small;
   margin-bottom: 0em;
   padding-bottom: 0em;
 }
+
 .submit {
   height: 2em;
   color: white;
@@ -311,12 +315,58 @@ label {
   border-radius: 0.5em;
   background-color: rgb(58, 55, 55);
 }
+
 form {
   padding-top: 1.5em;
 }
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  padding: 0em 1.5em;
+  background-color: hsla(187, 68%, 60%, 0.712);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mySlides-fade {
+  color: white;
+  float: left;
+  width: 70%;
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+.slider {
+  position: absolute;
+  bottom: 0;
+  padding: 0em 1.5em;
+  background-color: hsla(187, 68%, 60%, 0.712);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mySlides-fade {
+  color: white;
+  float: left;
+  width: 70%;
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.Slide {
+color: white;
+float: right;
+width: 30%;
+margin: 0;
+font-size: 1.2em;
+}
+
 .mySlides {
   display: none;
 }
+
 .prev, .next {
   cursor: pointer;
   position: relative;
@@ -327,9 +377,11 @@ form {
   transition: 0.6s ease;
   user-select: none;
 }
+
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
 .dot {
   cursor: pointer;
   position: relative;
@@ -345,6 +397,7 @@ form {
 .active, .dot:hover {
   background-color: #bbb;
 }
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -361,3 +414,17 @@ form {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
