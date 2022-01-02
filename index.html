@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWWW</title>
-    <link type="text/css" rel="stylesheet" href="styling.css"> 
+    <title>App Agency</title>
+    <link type="text/css" rel="stylesheet" href="common_styling.css"> 
+    <link type="text/css" rel="stylesheet" href="index_styling.css"> 
+    
 </head>
 <body>
     <header>
         <div class="header-title">
             <h1>App Agency</h1>
-            <h4>Free PSD website template</h4>
+            <h4>Agjenci e aplikacioneve</h4>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Homepage</a></li>
-                <li><a href="#">Style Demo</a></li>
-                <li><a href="#">Full Width</a></li>
-                <li><a href="#">Dropdown</a></li>
-                <li><a href="#">Link Text</a></li>
+                <li><a href="#">Projektet</a></li>
+                <li><a href="#">Shërbimet</a></li>
+                <li><a href="#">Procesi</a></li>
+                <li><a href="about.html">Për Ne</a></li>
+                <li><a href="#">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +40,20 @@
                 </div>
             </div>
             <div class="slider">
-                <p>Inteligula congue id elis donee see sagittis intes id laoreet aenean.</p>
+                <p class="mySlides-fade">Inteligula congue id elis donee see sagittis intes id laoreet aenean1.</p>
+                <p class="mySlides-fade">Inteligula congue id elis donee see sagittis intes id laoreet aenean2.</p>
+                <p class="mySlides-fade">Inteligula congue id elis donee see sagittis intes id laoreet aenean3.</p>
+                <p class="mySlides-fade">Inteligula congue id elis donee see sagittis intes id laoreet aenean4.</p>
+                <p class="mySlides-fade">Inteligula congue id elis donee see sagittis intes id laoreet aenean5.</p>
+                <p class="Slide" style="text-align: right;">
+                    <span class="prev" onclick="plusSlides(-1)">&#8249;</span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="next" onclick="plusSlides(1)">&#8250;</span>
+                </p>
             </div>
         </section>
 
@@ -146,13 +161,14 @@
     </main>
 
     <footer>
+        <div class="footer-content">
         <div class="footer-logo">
             <p>Keep in Touch</p>
             <img src="#" alt="">
         </div>
         <div class="contact-social">
             <div class="contact-info">
-                <p class="contact-title">Company Name</p>
+                <p class="contact-title1">Company Name</p>
                     <p>Street Name & Number <br>
                         Town <br>
                         Postcode/zip <br>
@@ -166,28 +182,31 @@
             </div>
             <div class="sm-form">
                 <div class="social-media">
-                    <p>Facebook: <a href="www.facebook.com">www.facebook.com</a>
+                    <p>Facebook: 
+                        <a class="facebook" href="www.facebook.com">www.facebook.com</a>
                     </p>
             
                     <p>
-                        Twitter: <a href="www.twitter.com">www.twitter.com</a>
+                        Twitter: 
+                        <a class = "twitter" href="www.twitter.com">www.twitter.com</a>
                     </p>
                     <p>
-                        LinkedIn: <a href="www.linkedin.com">www.linkedin.com</a>
+                        LinkedIn: 
+                        <a class="linkedin" href="www.linkedin.com">www.linkedin.com</a>
                     </p>
                 </div>
                 <form action="">
                     <label>Newsletter Signup:<br>
-                        <input type="text" name="email" placeholder="Enter Email Here"> 
-                        <input type="submit" value="Submit">
+                        <input class = "email" type="text" name="email" placeholder="Enter Email Here"> 
+                        <input class = "submit" type="submit" value="Submit">
                     </label>
                 </form>
             </div>
         </div>
-        
-        <div>
-            <p>Copyright &copy 2013 Domain Home - All Rights Reserved</p>
-            <p>Template by OS Templates</p>
+        </div>
+        <div class = "Copyright">
+            <p class = "PLeft">Copyright &copy 2013 Domain Home - All Rights Reserved</p>
+            <p class = "PRight">Template by OS Templates</p>
         </div>
     </footer>
 </body>
