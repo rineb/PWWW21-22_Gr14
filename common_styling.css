@@ -25,6 +25,7 @@ nav {
     border-radius: 1em;
     background-color: rgb(58, 55, 55);
     padding: 0.8em 0em;
+    font-weight: bold;
 
 }
 
@@ -113,6 +114,10 @@ nav ul li a:hover {
   
   p.contact-title {
     padding-top: 1em;
+  }
+  
+  address{
+    font-style: normal;
   }
   
   .Copyright {
