@@ -27,9 +27,10 @@
         </nav>
     </header>
     <main>
-        <div class="Kontakt">
+        <div class="contact">
             <h1>
                 <canvas id="canvas">
+                    Kontakti
                 </canvas>
             </h1>
             <p>
@@ -38,7 +39,7 @@
                 kontaktojmë sa më shpejt të jetë e mundur.
             </p>
         </div>
-        <div class="container">
+        <div class="contact-us">
             <div class="row">
                 <div class="column">
                     <div class="Email">
@@ -78,24 +79,24 @@
 
                     </div>
                     <form action="" id="myform" onsubmit="return validate();">
-                        <div class="flex-container">
-                            <div class="N">
-                                <label for="emri">Emri</label>
-                                <input type="text" placeholder="Emri juaj.." id="emri">
+                        <div class="firstname-lastname">
+                            <div class="firstname">
+                                <label for="name">Emri</label>
+                                <input type="text" placeholder="Emri juaj.." id="name">
                             </div>
-                            <div class="L">
-                                <label for="mbiemri">Mbiemri</label>
-                                <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri juaj..">
+                            <div class="last-name">
+                                <label for="lastname">Mbiemri</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="Mbiemri juaj..">
                             </div>
                         </div>
                         <label for="email">Email</label>
                         <input required type="text" id="email" name="email" placeholder="example@gmail.com">
-                        <div class="flex-container">
-                            <div class="N">
+                        <div class="phone-time">
+                            <div class="phone">
                                 <label for="phone">Tel:</label>
                                 <input type="text" id="phone" name="phone" placeholder="xxxxxxxxx" pattern="[0-9]{9}">
                             </div>
-                            <div class="L">
+                            <div class="time">
                                 <label for="time">Koha per zhvillim te produktit:</label>
                                 <input type="text" list="times" name="time" id="time">
                                 <datalist id="times">
@@ -117,34 +118,35 @@
                         <div>
                             <p>
                                 Zgjidhni atë që ju përshtatet më mirë:</p>
-                            <input type="radio" id="student" name="profesioni" value="">
-                            <label for="student">Unë jam një biznes i vogël </label><br>
-                            <input type="radio" id="fillestar" name="profesioni" value="">
-                            <label for="fillestar">Unë jam një biznes i mesëm</label><br>
-                            <input type="radio" id="profesionist" name="profesioni" value="">
-                            <label for="profesionist">Unë jam një kompani sipërmarrjeje</label>
+                            <input type="radio" name="business" value="">
+                            <label for="business1">Unë jam një biznes i vogël </label><br>
+                            <input type="radio"  name="business" value="">
+                            <label for="business2">Unë jam një biznes i mesëm</label><br>
+                            <input type="radio"  name="business" value="">
+                            <label for="business3">Unë jam një kompani sipërmarrjeje</label>
                         </div>
                         <div>
                             <p>Cili është buxheti juaj aktual në dispozicion?</p>
-                            <input type="radio" id="age1" name="cost" value="30">
+                            <input type="radio"  name="cost" value="30">
                             <label for="cost1">1000-5000</label><br>
-                            <input type="radio" id="age2" name="cost" value="60">
+                            <input type="radio" name="cost" value="60">
                             <label for="cost2">5000-10000</label><br>
-                            <input type="radio" id="age3" name="cost" value="100">
+                            <input type="radio"  name="cost" value="100">
                             <label for="cost3"> me shume se 10000</label>
                         </div>
                         <div>
                             <p>Si financohet produkti juaj?</p>
-                            <input type="radio" id="Financimi" name="Financimi" value="30">
-                            <label for="Financimi1">Vetë-financuar</label><br>
-                            <input type="radio" id="age2" name="Financimi" value="60">
-                            <label for="Financimi2">Në proces të mbledhjes së fondeve</label><br>
-                            <input type="radio" id="age3" name="Financimi" value="100">
-                            <label for="Financimi3"> Financimi tashmë është siguruar nëpërmjet investitorëve </label><br>
-                            <input type="radio" id="age3" name="Financimi" value="100">
-                            <label for="Financimi4"> Nuk jam i sigurt për momentin</label>
+                            <input type="radio" name="finance" value="30">
+                            <label for="finance1">Vetë-financuar</label><br>
+                            <input type="radio"  name="finance" value="60">
+                            <label for="finance2">Në proces të mbledhjes së fondeve</label><br>
+                            <input type="radio"  name="finance" value="100">
+                            <label for="finance3"> Financimi tashmë është siguruar nëpërmjet investitorëve
+                            </label><br>
+                            <input type="radio"  name="finance" value="100">
+                            <label for="finance4"> Nuk jam i sigurt për momentin</label>
                         </div>
-                        <div class="btn">
+                        <div class="submitButton">
                             <input type="submit">
                         </div>
                     </form>
@@ -213,8 +215,8 @@
         kontakt.strokeText("Kontakti", 10, 50);
 
         function validate() {
-            var emri = document.getElementById("emri").value;
-            var mbiemri = document.getElementById("mbiemri").value;
+            var name = document.getElementById("name").value;
+            var lastname = document.getElementById("lastname").value;
             var phone = document.getElementById("phone").value;
             var email = document.getElementById("email").value;
             var link = document.getElementById("link").value;
@@ -229,18 +231,17 @@
             error_message.style.padding = "10px";
 
             var text;
-            if (emri.length < 3) {
-                text = "Emri duhet te permbaj te katen tre shkronja";
+            if (name.length < 3) {
+                text = "Emri duhet te permbaj te pakten tre shkronja";
                 error_message.innerHTML = text;
                 return false;
             }
-            if (mbiemri.length < 7) {
+            if (lastname.length < 7) {
                 text = " ju lutem fusni nje mbiemer valid. Mbiemri duhet te permbaj te pakten 7 shkronja.";
                 error_message.innerHTML = text;
                 return false;
             }
-            if(pattern.test(link) == false)
-            {
+            if (pattern.test(link) == false) {
                 text = "Ju lutem fusni nje URL valide";
                 error_message.innerHTML = text;
                 return false;

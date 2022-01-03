@@ -1,115 +1,129 @@
 
-.Kontakt{
-    text-align: center;
-    position: relative;
-    float: left;
-    padding: 1em 1em;
-    background-color: hsla(187, 68%, 60%, 0.712);
-  }
+.contact{
+  text-align: center;
+  position: relative;
+  float: left;
+  padding: 1em 1em;
+  background-color: hsla(187, 68%, 60%, 0.712);
+}
   
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
   
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
   
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
   
-  .button {
-    background-color: #04aaa2;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
+.button {
+  background-color: #04aaa2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
   
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+input[type=submit]:hover {
+  background-color: #45a049;
+}
   
-  /* Style the container/contact section */
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-  }
+/* Style the container/contact section */
+.contact-us {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
   
-  .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-  }
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .MailTo{
-    text-align: center;
-    font-size: 1em;
-    text-decoration: none;
-    color: black;
-  }
+.MailTo {
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  color: black;
+}
   
-    .tel{
-      text-align: center;
-      position: relative;
-      margin: 1em;
-      border-bottom: 0.1em solid gray;
-    }
+.tel {
+  text-align: center;
+  position: relative;
+  margin: 1em;
+  border-bottom: 0.1em solid gray;
+}
   
-    .Email{
-        text-align: center;
-        position: relative;
-        margin: 1em;
-        border-bottom: 0.1em solid gray;
-      }
+.Email {
+  text-align: center;
+  position: relative;
+  margin: 1em;
+  border-bottom: 0.1em solid gray;
+}
 
-    .Location{
-      text-align: center;
-      position: relative;
-      margin: 1em;
-      border-bottom: 0.1em solid gray;
-    }
+.Location {
+  text-align: center;
+  position: relative;
+  margin: 1em;
+  border-bottom: 0.1em solid gray;
+}
 
-  #canvas{
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
-  }
+#canvas {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
 
-    .Location a {
-        color: black;
-        text-decoration: none;
-        font-size: 1em;
-      }
+.Location a {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
 
-      .flex-container {
-        display: flex;
+.firstname-lastname {
+  display: flex;
+}
 
-      }
+.firstname {
+  padding-right: 10px;
+  width:50%
+}
 
-      .N{padding-right: 10px;
-          width: 50%;
-      }
+.last-name {
+ padding-left: 10px;
+ width:50%
+}
 
-      .L{
-          padding-left: 10px;
-          width: 50%;
-      }
-    #error_message{
-      color: red;
-      font-weight: bold;
-    }
+#error_message {
+  color: red;
+  font-weight: bold;
+}
+
+.phone-time {
+  display: flex;
+}
+
+.phone {
+  padding-right: 10px;
+  width:50%
+}
+.time {
+  padding-left: 10px;
+  width:50%
+}
