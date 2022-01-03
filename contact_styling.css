@@ -1,4 +1,5 @@
 
+<<<<<<< Updated upstream
 .contact{
   text-align: center;
   position: relative;
@@ -6,6 +7,16 @@
   padding: 1em 1em;
   background-color: hsla(187, 68%, 60%, 0.712);
 }
+=======
+.Kontakt{
+    text-align: center;
+    position: relative;
+    float: left;
+    padding: 1em 1em;
+    background-color: hsla(187, 68%, 60%, 0.712);
+    width: 100%;
+  }
+>>>>>>> Stashed changes
   
 main {
   font-family: Arial, Helvetica, sans-serif;
@@ -24,6 +35,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
   
+<<<<<<< Updated upstream
 .button {
   background-color: #04aaa2;
   color: white;
@@ -35,6 +47,25 @@ input[type=text], select, textarea {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+=======
+  .btn {
+    color: white;
+    padding-top: 10px;
+    border: none;
+    
+  }
+
+  #submit{
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #688f5c;
+    cursor: pointer;
+  }
+>>>>>>> Stashed changes
   
 /* Style the container/contact section */
 .contact-us {
@@ -110,6 +141,7 @@ input[type=submit]:hover {
  width:50%
 }
 
+<<<<<<< Updated upstream
 #error_message {
   color: red;
   font-weight: bold;
@@ -127,3 +159,14 @@ input[type=submit]:hover {
   padding-left: 10px;
   width:50%
 }
+=======
+      .L{
+          padding-left: 10px;
+          width: 50%;
+      }
+
+    .radio_butonat{
+      padding: 5px;
+      border-bottom: 1px solid black;
+    }
+>>>>>>> Stashed changes

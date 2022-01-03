@@ -63,7 +63,7 @@ flex-direction: row;
   
   @keyframes move_img {
     0%   {left:0px ; }
-    100% {left: 100px; }
+    100% {left: 50px; }
   }
 
   .app1:hover .img1 {
