@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Agency - Për Ne</title>
+    <link type="text/css" rel="stylesheet" href="common_styling.css">
+    <link type="text/css" rel="stylesheet" href="contact_styling.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <h1>App Agency</h1>
+            <h4>Agjenci e aplikacioneve</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="projects.html">Projektet</a></li>
+                <li><a href="#">Shërbimet</a></li>
+                <li><a href="#">Procesi</a></li>
+                <li><a href="about.html">Për Ne</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="Kontakt">
+            <h1>
+                <canvas id="canvas">
+                </canvas>
+            </h1>
+            <p>
+                Nëse keni ndonjë pyetje, një anëtar i stafit do të jetë gjithmonë i lumtur të ndihmojë.
+                Mos ngurroni të na kontaktoni me telefon ose email dhe ne do të jemi të sigurt që do t'ju
+                kontaktojmë sa më shpejt të jetë e mundur.
+            </p>
+        </div>
+        <div class="Contact-Info">
+            <div class="Email">
+                <img src="images/mail.jpg" alt="" style="width:2em; height: 2em;">
+                <div>
+                    <h2>Email:</h2>
+                    <p>
+                        <a class="MailTo" href="mailto:someone@gmial.com"> someone@gmail.com </a>
+                    </p>
+                    </p>
+                </div>
+            </div>
+            <div class="tel">
+                <p>
+                    <img src="images/phonelogo.jpg" alt="" style="width:2em; height: 2em;">
+                </p>
+                <h2>
+                    Numri i telefonit:
+                </h2>
+                <p>
+                    0113 288 6000
+                </p>
+            </div>
+            <div class="Location">
+                <img src="images/location.png" alt=""
+                    style="width:2em; height: 2em;">
+                <div>
+                    <h2>Lokacioni:</h2>
+                    <p>Prishtine,</p>
+                    <p>E hene - e premte : 08:00-20:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3>Na kontaktoni</h3>
+            <form action="/action_page.php">
+                <div class="form-complete">
+                    <div class="form">
+                        <label for="fname">Emri:</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Emri">
+                        <label for="lname">Mbiemri:</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Mbiemri">
+                        <label for="Email">Email:</label>
+                        <input required type="text" id="email" name="email" placeholder="example@gmail.com">
+                        <label for="lname">Tel:</label>
+                        <input type="text" id="tel" name="tel" placeholder="xxxx-xxxxxxxxx">
+                        <label for="Linkedin"> <abbr title="Uniform Resource Locator">URL</abbr> i Linkedin personal:
+                        </label>
+                        <input required type="text" placeholder="https://">
+                        <label for="subject">Ideja juaj</label>
+                        <textarea id="subject" name="subject" placeholder="Ideja juaj ketu.."
+                            style="height:200px"></textarea>
+                    </div>
+                    <div class="Radio">
+                        <div>
+                            <div class="radio-form">
+                                <p>Perzgjedhni aftesimin tuaj::</p>
+                                <input type="radio" id="student" name="profesioni" value="">
+                                <label for="student">Student</label><br>
+                                <input type="radio" id="fillestar" name="profesioni" value="">
+                                <label for="fillestar">fillestar</label><br>
+                                <input type="radio" id="profesionist" name="profesioni" value="">
+                                <label for="profesionist">Profesionist</label>
+                            </div>
+                            <div class="radio-form">
+                                <p>Sa merr kohe zhvillimi i aplikacionit:</p>
+                                <input type="radio" id="age1" name="time" value="30">
+                                <label for="time1">1 muaj</label><br>
+                                <input type="radio" id="age2" name="age" value="60">
+                                <label for="time2">1-6 muaj</label><br>
+                                <input type="radio" id="age3" name="age" value="100">
+                                <label for="time3"> me shume se 6 muaj</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="radio-form">
+                                <p>Sa merr kosto zhvillimi i aplikacionit:</p>
+                                <input type="radio" id="age1" name="cost" value="30">
+                                <label for="cost1">1000-5000</label><br>
+                                <input type="radio" id="age2" name="cost" value="60">
+                                <label for="cost2">5000-10000</label><br>
+                                <input type="radio" id="age3" name="cost" value="100">
+                                <label for="cost3"> me shume se 10000</label>
+                            </div>
+                            <div class="radio-form">
+                                <p>Gjuha e perdorur per zhvillimi i aplikacionit:</p>
+                                <input type="radio" id="age1" name="language" value="30">
+                                <label for="language1">Java</label><br>
+                                <input type="radio" id="age2" name="language" value="60">
+                                <label for="language2">Python</label><br>
+                                <input type="radio" id="age3" name="language" value="100">
+                                <label for="language3"> C# ose C++</label><br>
+                                <input type="radio" id="age3" name="language" value="100">
+                                <label for="language4"> tjeter</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="button" type="submit" value="Submit">
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <p>Keep in Touch</p>
+                <img src="#" alt="">
+            </div>
+            <div class="contact-social">
+                <div class="contact-info">
+                    <p class="contact-title1">Company Name</p>
+                    <p>Street Name & Number <br>
+                        Town <br>
+                        Postcode/zip <br>
+                    </p>
+                    <p class="contact-title">Tel:</p>
+                    <p>xxxxx xxxxxxxxxx</p>
+                    <p class="contact-title">Fax</p>
+                    <p>xxxxx xxxxxxxxxx</p>
+                    <p class="contact-title">Email</p>
+                    <p>contact@mydomain.com</p>
+                </div>
+                <div class="sm-form">
+                    <div class="social-media">
+                        <p>Facebook:
+                            <a class="facebook" href="www.facebook.com">www.facebook.com</a>
+                        </p>
+
+                        <p>
+                            Twitter:
+                            <a class="twitter" href="www.twitter.com">www.twitter.com</a>
+                        </p>
+                        <p>
+                            LinkedIn:
+                            <a class="linkedin" href="www.linkedin.com">www.linkedin.com</a>
+                        </p>
+                    </div>
+                    <form action="">
+                        <label>Newsletter Signup:<br>
+                            <input class="email" type="text" name="email" placeholder="Enter Email Here">
+                            <input class="submit" type="submit" value="Submit">
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="Copyright">
+            <p class="PLeft">Copyright &copy 2013 Domain Home - All Rights Reserved</p>
+            <p class="PRight">Template by OS Templates</p>
+        </div>
+    </footer>
+    <script>
+        var g = document.getElementById("canvas");
+        var geeks = g.getContext("2d");
+        var gradient = geeks.createLinearGradient(1, 4, g.width, 1);
+        gradient.addColorStop("0", "black");
+        gradient.addColorStop("0.5", "blue");
+        gradient.addColorStop("1.0", "black");
+        geeks.font = "1em sans-serif";
+        geeks.strokeStyle = gradient;
+        geeks.strokeText("Kontakti", 10, 50);
+    </script>
+</body>
+
+</html>
