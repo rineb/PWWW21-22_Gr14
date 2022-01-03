@@ -27,10 +27,9 @@
         </nav>
     </header>
     <main>
-        <div class="contact">
+        <div class="Kontakt">
             <h1>
                 <canvas id="canvas">
-                    Kontakti
                 </canvas>
             </h1>
             <p>
@@ -39,7 +38,7 @@
                 kontaktojmë sa më shpejt të jetë e mundur.
             </p>
         </div>
-        <div class="contact-us">
+        <div class="container">
             <div class="row">
                 <div class="column">
                     <div class="Email">
@@ -75,26 +74,6 @@
                     </div>
                 </div>
                 <div class="column">
-<<<<<<< Updated upstream
-                    <div id="error_message">
-
-                    </div>
-                    <form action="" id="myform" onsubmit="return validate();">
-                        <div class="firstname-lastname">
-                            <div class="firstname">
-                                <label for="name">Emri</label>
-                                <input type="text" placeholder="Emri juaj.." id="name">
-                            </div>
-                            <div class="last-name">
-                                <label for="lastname">Mbiemri</label>
-                                <input type="text" id="lastname" name="lastname" placeholder="Mbiemri juaj..">
-                            </div>
-                        </div>
-                        <label for="email">Email</label>
-                        <input required type="text" id="email" name="email" placeholder="example@gmail.com">
-                        <div class="phone-time">
-                            <div class="phone">
-=======
                     <form id="myform" onsubmit="return validate()">
                         <div class="flex-container">
                             <div class="N">
@@ -110,19 +89,19 @@
                         <input type="text" id="email" required name="email" placeholder="someone@example.com">
                         <div class="flex-container">
                             <div class="N">
->>>>>>> Stashed changes
                                 <label for="phone">Tel:</label>
-                                <input type="text" required id="phone" name="phone" placeholder="xxxxxxxxx" pattern="[0-9]{9}">
+                                <input type="text" required id="phone" name="phone" placeholder="xxxxxxxxx"
+                                    pattern="[0-9]{9}">
                             </div>
-                            <div class="time">
+                            <div class="L">
                                 <label for="time">Koha per zhvillim te produktit:</label>
                                 <select required id="times">
                                     <option value="1-2 jave">1 jave</option>
-                                    <option value="3-4 jave">2 jave</option>                                    
+                                    <option value="3-4 jave">2 jave</option>
                                     <option value="1-2 muaj">1-2 muaj</option>
                                     <option value="Me shume se 2 muaj">Me shume se 2 muaj</option>
-                                    </select>
-                            </div> 
+                                </select>
+                            </div>
                         </div>
                         <label for="link"> <abbr title="Uniform Resource Locator">URL</abbr> i LinkedIn personal
                             (opsional) :
@@ -135,51 +114,24 @@
                         <div class="radio_butonat">
                             <p>
                                 Zgjidhni atë që ju përshtatet më mirë:</p>
-<<<<<<< Updated upstream
-                            <input type="radio" name="business" value="">
-                            <label for="business1">Unë jam një biznes i vogël </label><br>
-                            <input type="radio"  name="business" value="">
-                            <label for="business2">Unë jam një biznes i mesëm</label><br>
-                            <input type="radio"  name="business" value="">
-                            <label for="business3">Unë jam një kompani sipërmarrjeje</label>
-=======
                             <input type="radio" required id="student" name="profesioni" value="">
                             <label for="student">Unë jam një biznes i vogël </label><br>
                             <input type="radio" id="fillestar" name="profesioni" value="">
                             <label for="fillestar">Unë jam një biznes i mesëm</label><br>
                             <input type="radio" id="profesionist" name="profesioni" value="">
                             <label for="profesionist">Unë jam një kompani sipërmarrjeje</label>
->>>>>>> Stashed changes
                         </div>
                         <div class="radio_butonat">
                             <p>Cili është buxheti juaj aktual në dispozicion?</p>
-<<<<<<< Updated upstream
-                            <input type="radio"  name="cost" value="30">
-=======
                             <input type="radio" required id="age1" name="cost" value="30">
->>>>>>> Stashed changes
                             <label for="cost1">1000-5000</label><br>
-                            <input type="radio" name="cost" value="60">
+                            <input type="radio" id="age2" name="cost" value="60">
                             <label for="cost2">5000-10000</label><br>
-                            <input type="radio"  name="cost" value="100">
+                            <input type="radio" id="age3" name="cost" value="100">
                             <label for="cost3"> me shume se 10000</label>
                         </div>
                         <div class="radio_butonat">
                             <p>Si financohet produkti juaj?</p>
-<<<<<<< Updated upstream
-                            <input type="radio" name="finance" value="30">
-                            <label for="finance1">Vetë-financuar</label><br>
-                            <input type="radio"  name="finance" value="60">
-                            <label for="finance2">Në proces të mbledhjes së fondeve</label><br>
-                            <input type="radio"  name="finance" value="100">
-                            <label for="finance3"> Financimi tashmë është siguruar nëpërmjet investitorëve
-                            </label><br>
-                            <input type="radio"  name="finance" value="100">
-                            <label for="finance4"> Nuk jam i sigurt për momentin</label>
-                        </div>
-                        <div class="submitButton">
-                            <input type="submit">
-=======
                             <input type="radio" required id="Financimi" name="Financimi" value="30">
                             <label for="Financimi1">Vetë-financuar</label><br>
                             <input type="radio" id="age2" name="Financimi" value="60">
@@ -192,7 +144,6 @@
                         </div>
                         <div class="btn">
                             <input type="submit" id="submit" value="Submit">
->>>>>>> Stashed changes
                         </div>
                     </form>
                 </div>
@@ -259,99 +210,55 @@
         kontakt.strokeStyle = gradient;
         kontakt.strokeText("Kontakti", 10, 50);
 
-<<<<<<< Updated upstream
+
+
         function validate() {
-            var name = document.getElementById("name").value;
-            var lastname = document.getElementById("lastname").value;
-            var phone = document.getElementById("phone").value;
-            var email = document.getElementById("email").value;
-            var link = document.getElementById("link").value;
-            var message = document.getElementById("message").value;
-            var error_message = document.getElementById("error_message");
-            var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-                '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-                '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-                '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-            error_message.style.padding = "10px";
+            const emailValid = (email) => {
+                const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+                return emailRegex.test(email.toLowerCase());
+            }
+            const urlValid = (link) => {
+                const URLRegex = (/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+                return URLRegex.test(link.toLowerCase());
+            }
+            const emriValid = (emri) => {
+                const emriRegex = /[A-Za-z]/;
+                return emriRegex.test(emri.toLowerCase());
 
-            var text;
-            if (name.length < 3) {
-                text = "Emri duhet te permbaj te pakten tre shkronja";
-                error_message.innerHTML = text;
-                return false;
             }
-            if (lastname.length < 7) {
-                text = " ju lutem fusni nje mbiemer valid. Mbiemri duhet te permbaj te pakten 7 shkronja.";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (pattern.test(link) == false) {
-                text = "Ju lutem fusni nje URL valide";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (email.indexOf("@gmail.com") == -1 || email.length < 16) {
-                text = "ju lutem fusni nje email valid p.sh xxxxxx@gmail.com";
-                error_message.innerHTML = text;
-                return false;
-            }
-            if (message.length <= 100) {
-                text = "Ju lutem shkruani nj pershkrim te ides suaj me te pakten 100 karaktere ";
-                error_message.innerHTML = text;
-                return false;
-=======
-        
-            
-            function validate() {
-                const emailValid = (email) => {
-                    const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
-                    return emailRegex.test(email.toLowerCase());
-                }
-                const urlValid = (link) => {
-                    const URLRegex = (/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-                    return URLRegex.test(link.toLowerCase());
-                }
-                const emriValid = (emri) => {
-                        const emriRegex = /[A-Za-z]/;
-                        return emriRegex.test(emri.toLowerCase());
+            const mbiemriValid = (mbiemri) => {
+                const mbiemriRegex = /[A-Za-z]/;
+                return mbiemriRegex.test(mbiemri.toLowerCase());
 
-                    }
-                    const mbiemriValid = (mbiemri) => {
-                        const mbiemriRegex = /[A-Za-z]/;
-                        return mbiemriRegex.test(mbiemri.toLowerCase());
-
-                    }
-                var emri = document.getElementById('emri');
-                var mbiemri = document.getElementById('mbiemri');
-                var email = document.getElementById('email');
-                var message = document.getElementById("message");
-                if (!emriValid(emri.value)) {
-                        alert("Ju lutem shkruani nje emer valid.");
-                        emri.focus();
-                        return false;
-                }
-                if (!mbiemriValid(mbiemri.value)) {
-                        alert("Ju lutem shkruani nje mbiemer valid.");
-                        mbiemri.focus();
-                        return false;
-                }  
-                if (!emailValid(email.value)) {
-                    alert("Ju lutem shkruani email-in valid.");
-                    email.focus();
-                    return false;
-                }
-                if (!urlValid(link.value)) {
-                    alert("Ju lutem shkruani nje URL valide");
-                    link.focus();
-                    return false;
-                }
-                alert("Forma juaj eshte pranuar");
-                return true;
->>>>>>> Stashed changes
             }
-            
+            var emri = document.getElementById('emri');
+            var mbiemri = document.getElementById('mbiemri');
+            var email = document.getElementById('email');
+            var message = document.getElementById("message");
+            if (!emriValid(emri.value)) {
+                alert("Ju lutem shkruani nje emer valid.");
+                emri.focus();
+                return false;
+            }
+            if (!mbiemriValid(mbiemri.value)) {
+                alert("Ju lutem shkruani nje mbiemer valid.");
+                mbiemri.focus();
+                return false;
+            }
+            if (!emailValid(email.value)) {
+                alert("Ju lutem shkruani email-in valid.");
+                email.focus();
+                return false;
+            }
+            if (!urlValid(link.value)) {
+                alert("Ju lutem shkruani nje URL valide");
+                link.focus();
+                return false;
+            }
+            alert("Forma juaj eshte pranuar");
+            return true;
+        }
+
     </script>
 </body>
 
