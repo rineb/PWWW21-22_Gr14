@@ -1,123 +1,147 @@
-
-.Kontakt{
-  text-align: center;
-  position: relative;
-  float: left;
-  padding: 1em 1em;
-  background-color: hsla(187, 68%, 60%, 0.712);
-  width: 100%;
+.contact {
+    text-align: center;
+    position: relative;
+    float: left;
+    padding: 1em 1em;
+    background-color: hsla(187, 68%, 60%, 0.712);
+    width: 100%;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+main {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+#myform input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-.btn {
-  color: white;
-  padding-top: 10px;
-  border: none;
-  
+.submitButton {
+    color: white;
+    padding-top: 10px;
+    border: none;
 }
 
-#submit{
-  padding: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+#submit {
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 input[type=submit]:hover {
-  background-color: #688f5c;
-  cursor: pointer;
+    background-color: #688f5c;
+    cursor: pointer;
 }
 
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
+.contact-us {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
 }
 
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
+.contact-Info {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.contact-form {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
 }
 
-.MailTo{
-  text-align: center;
-  font-size: 1em;
-  text-decoration: none;
-  color: black;
+.info-form:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-  .tel{
+.mailTO {
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.tel {
     text-align: center;
     position: relative;
     margin: 1em;
     border-bottom: 0.1em solid gray;
-  }
+}
 
-  .Email{
-      text-align: center;
-      position: relative;
-      margin: 1em;
-      border-bottom: 0.1em solid gray;
-    }
-
-  .Location{
+.email1 {
     text-align: center;
     position: relative;
     margin: 1em;
     border-bottom: 0.1em solid gray;
-  }
-
-#canvas{
-  font-size: 2em;
-  margin: 0;
-  padding: 0;
 }
 
-  .Location a {
-      color: black;
-      text-decoration: none;
-      font-size: 1em;
-    }
+.location {
+    text-align: center;
+    position: relative;
+    margin: 1em;
+    border-bottom: 0.1em solid gray;
+}
 
-    .flex-container {
-      display: flex;
+#canvas {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
 
-    }
+.location a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+}
 
-    .N{padding-right: 10px;
-        width: 50%;
-    }
+.firstname-lastname {
+    display: flex;
+}
 
-    .L{
-        padding-left: 10px;
-        width: 50%;
-    }
+.firstname {
+    padding-right: 10px;
+    width: 50%;
+}
 
-  .radio_butonat{
-    padding: 5px;
-    border-bottom: 1px solid black;
-  }
+.last-name {
+    padding-left: 10px;
+    width: 50%;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+#error_message {
+    color: red;
+    font-weight: bold;
+}
+
+.phone-time {
+    display: flex;
+}
+
+.phone {
+    padding-right: 10px;
+    width: 50%
+}
+
+.time {
+    padding-left: 10px;
+    width: 50%
+}
