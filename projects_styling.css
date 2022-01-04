@@ -193,6 +193,20 @@ flex-direction: row;
       stroke-dashoffset: 250%;
     }
   }
+
+ .button {
+    padding-top: 30px;
+}
+ .button .read {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(95, 89, 102);
+    color: white;
+    text-align: center;
+    font-size: 1.25em;
+    cursor: pointer;
+}
   
   
   
