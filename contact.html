@@ -8,6 +8,7 @@
     <title>App Agency - Kontakt</title>
     <link type="text/css" rel="stylesheet" href="common_styling.css">
     <link type="text/css" rel="stylesheet" href="contact_styling.css">
+
     <style>
         .user-location-container {
             padding: 1em;
@@ -23,15 +24,119 @@
             background-color: lightgray;
             border-radius: 10%;
         }
+
+        .contact-form {
+            position: relative;
+        }
+
+        #loginform {
+            position: absolute;
+            top: 0;
+            z-index: 200;
+        }
+
+        #show_login {
+            padding: 0.5em 1em;
+        }
+
+        #loginform {
+            background-image: url("images/login.jpg");
+            padding: 2em;
+            visibility: hidden;
+            display: none;
+        }
+
+        #loginform form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        #loginform p {
+            font-size: 1.2em;
+            color: white;
+        }
+
+        #loginform form > input {
+            padding: 1em;
+        }
+
+        #dologin {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .radio_butonat {
+            padding: 0.5em;
+            border-bottom: 1px solid black;
+        }
+
+        .checkbox {
+            padding-top: 0.5em;
+        }
     </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            checkUser();
+            $("#show_login").click(function() {
+                showpopup();
+            });
+            $("#close_login").click(function() {
+                hidepopup();
+            });
+        });
+
+        function showpopup()
+        {
+            $("#loginform").fadeIn(500);
+            $("#loginform").css({"visibility":"visible"});
+        }
+
+        function hidepopup()
+        {
+            $("#loginform").fadeOut(500);
+            $("#loginform").css({"visibility":"hidden","display":"none"});
+        }
+
+        function submitLogin() {
+            const email = $("#email").val();
+            localStorage.setItem("username", email);
+            hidepopup();
+            return true;
+        }
+
+        function checkUser() {
+            const username = localStorage.getItem("username");
+            if (username !== null) {
+                try {
+                    $("#show_login").hide();
+                    $("#current-user").text("Current user " + username);
+                    $("#current-user").show();
+                } catch (err) {
+                    console.log(err.message);
+                }
+            } else {
+                try {
+                    $("#show_login").show();
+                    $("#current-user").hide();
+                } catch (err) {
+                    console.log(err.message);
+                }
+                
+            }
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <div class="header-title">
-            <h1>App Agency</h1>
-            <h4>Agjenci e aplikacioneve</h4>
-        </div>
+        <a href="index.html">
+            <div class="header-title">
+                <h1>App Agency</h1>
+                <h4>Agjenci e aplikacioneve</h4>
+            </div>
+        </a>
         <nav>
             <ul>
                 <li><a href="projects.html">Projektet</a></li>
@@ -49,8 +154,8 @@
                     Kontakti
                 </canvas>
             </h1>
-            <p>
-                Nëse keni ndonjë pyetje, një anëtar i stafit do të jetë gjithmonë i gatshëm të ju ndihmojë. Mos ngurroni të na kontaktoni me telefon ose email dhe ne do të sigurohemi që t'ju kontaktojmë sa më shpejt të jetë e mundur.
+            <p id="intro">
+                Nwse keni ndonjw pyetje, njw anwtar i stafit do tw jetw gjithmonw i gatshwm tw ju ndihmojw. Mos ngurroni tw na kontaktoni me telefon ose email dhe ne do tw sigurohemi qw t'ju kontaktojmw sa mw shpejtw tw jetw e mundur.
             </p>
         </div>
         <div class="contact-us">
@@ -93,6 +198,19 @@
                     </div>
                 </div>
                 <div class="contact-form">
+                    <div class="login">
+                        <p id="current-user"></p>
+                        <input type="button" id="show_login" value="Kycu ne llogari">
+                        <div id = "loginform">
+                            <form method = "post" onsubmit = "return submitLogin()">
+                                <p>Shkruaj emailin dhe fjalekalimin</p>
+                                <!-- <keygen name="rsaPublicKey" keytype="RSA"> -->
+                                <input type = "email" id = "email" placeholder = "Email" name = "uid">
+                                <input type = "password" id = "password" name = "upass" placeholder = "********">
+                                <input type = "submit" id = "dologin" value = "Login">
+                            </form>
+                        </div>
+                    </div>
                     <form id="myform" onsubmit="return validate()">
                         <div class="firstname-lastname">
                             <div class="firstname">
@@ -105,7 +223,7 @@
                             </div>
                         </div>
                         <label>Email</label>
-                        <input type="text" id="email" required name="email" placeholder="someone@example.com">
+                        <input type="email" id="contact_email" required name="email" placeholder="someone@example.com">
                         <div class="phone-time">
                             <div class="phone">
                                 <label>Tel:</label>
@@ -124,10 +242,10 @@
                         <label for="link"> <abbr title="Uniform Resource Locator">URL</abbr> i LinkedIn personal
                             (opsional) :
                         </label>
-                        <input id="link" type="text" placeholder="https://">
+                        <input id="link" type="text" placeholder="https://" name>
 
                         <label for="message">Përshkrimi i idesë suaj:</label>
-                        <textarea required placeholder="Ideja juaj këtu.." id="message"></textarea>
+                        <textarea required placeholder="Ideja juaj këtu.." id="message" rows="7"></textarea>
                         <div class="radio_butonat">
                             <p>
                                 Zgjidhni atë që ju përshtatet më mirë:</p>
@@ -159,8 +277,16 @@
                             <input type="radio" name="finance" value="Nuk jam i sigurt për momentin">
                             <label> Nuk jam i sigurt për momentin</label>
                         </div>
+                        <div class="checkbox">
+                            <label class="privacy-policy">
+                                <input type="checkbox" 
+                                       name="privacy-policy-agreement" 
+                                       value="check" required>
+                                Pajtohem me kushtet e privatësisë.
+                          </label>
+                        </div>
                         <div class="submitButton">
-                            <input type="submit" id="submit" value="Dergo">
+                            <input type="submit" id="submit" value="Submit">
                         </div>
                     </form>
                 </div>
@@ -169,6 +295,7 @@
     </main>
     <footer>
         <div class="footer-content">
+            <p id=></p>
             <div class="footer-logo">
                 <p>Keep in Touch</p>
                 <img src="#" alt="">
@@ -200,9 +327,9 @@
                             <a class="linkedin" href="https://www.linkedin.com">www.linkedin.com</a>
                         </p>
                     </div>
-                    <form action="">
+                    <form method="post">
                         <label>Newsletter Signup:<br>
-                            <input class="email" type="text" name="email" placeholder="Enter Email Here">
+                            <input class="email" type="email" name="email" placeholder="Enter Email Here">
                             <input class="submit" type="submit" value="Submit">
                         </label>
                     </form>
@@ -225,40 +352,51 @@
         kontakt.strokeStyle = gradient;
         kontakt.strokeText("Kontakti", 10, 50);
 
+        var text = document.getElementById('intro');
+        var result = text.innerHTML.replace(/w/gi, 'ë');
+        text.innerHTML = result;
+
         function validate() {
             const emailValid = (email) => {
-                const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
-                return emailRegex.test(email.toLowerCase());
+                const emailRegex = /^([A-Za-z0-9-.])+@([A-Za-z0-9-.])+.([A-Za-z]{2,4})$/;
+                return emailRegex.test(email);
             }
             const urlValid = (link) => {
                 const URLRegex = (/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-                return URLRegex.test(link.toLowerCase());
+                return URLRegex.test(link);
             }
-            const emriValid = (emri) => {
-                const emriRegex = /[A-Za-z]/;
-                return emriRegex.test(emri.toLowerCase());
+            const nameValid = (name) => {
+                const nameRegex = /[A-Za-z]/;
+                return nameRegex.test(name);
+            }
+            const lastnameValid = (lastname) => {
+                const lastnameRegex = /[A-Za-z]/;
+                return lastnameRegex.test(lastname);
+            }
 
+            const messageValid = (message) => {
+                const messageRegex = /\s/g;
+                const result = message.trim().match(messageRegex);
+                return result === null || result.length < 50;
             }
-            const mbiemriValid = (mbiemri) => {
-                const mbiemriRegex = /[A-Za-z]/;
-                return mbiemriRegex.test(mbiemri.toLowerCase());
 
-            }
-            var emri = document.getElementById('emri');
-            var mbiemri = document.getElementById('mbiemri');
-            var email = document.getElementById('email');
+            var name = document.getElementById('name');
+            var lastname = document.getElementById('lastname');
+            var email = document.getElementById('contact_email');
             var message = document.getElementById("message");
-            if (!emriValid(emri.value)) {
+            console.log(!nameValid(name.value));
+            if (!nameValid(name.value)) {
                 alert("Ju lutem shkruani nje emer valid.");
-                emri.focus();
+                name.focus();
                 return false;
             }
-            if (!mbiemriValid(mbiemri.value)) {
+            if (!lastnameValid(lastname.value)) {
                 alert("Ju lutem shkruani nje mbiemer valid.");
-                mbiemri.focus();
+                lastname.focus();
                 return false;
             }
             if (!emailValid(email.value)) {
+                console.log(email);                console.log(email.value);
                 alert("Ju lutem shkruani email-in valid.");
                 email.focus();
                 return false;
@@ -268,10 +406,17 @@
                 link.focus();
                 return false;
             }
+            if (!messageValid(message.value)) {
+                alert("Ju lutem shkruani te pakten 50 fjale. Ju keni shkruar " + (message.innerHTML.match(messageRegex)).length) + " fjale";
+                message.focus();
+                return false;
+            }
+
             alert("Forma juaj eshte pranuar");
             return true;
         }
     </script>
+
     <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
         function showLocation() {
@@ -279,6 +424,7 @@
                 navigator.geolocation.getCurrentPosition(showMap, showError);
             } else {
                 alert("Na vjen keq, shfletuesi juaj nuk e mbështet HTML5 Geolocation.");
+                throw new Error("Na vjen keq, shfletuesi juaj nuk e mbështet HTML5 Geolocation.");
             }
         }
 

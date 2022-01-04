@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="about.appcache">
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,12 @@
 
 <body>
     <header>
-        <div class="header-title">
-            <h1>App Agency</h1>
-            <h4>Agjenci e aplikacioneve</h4>
-        </div>
+        <a href="index.html">
+            <div class="header-title">
+                <h1>App Agency</h1>
+                <h4>Agjenci e aplikacioneve</h4>
+            </div>
+        </a>
         <nav>
             <ul>
                 <li><a href="projects.html">Projektet</a></li>
@@ -35,7 +37,7 @@
         <div class="company-intro">
             <div class="svg-triangle">
                 <svg>
-                    <polygon points="130, 10, 130, 130, 240, 65"/>
+                    <polygon points="200, 10, 200, 130, 70, 65"/>
                 </svg>
             </div>
             <div class="company-desc">
@@ -137,16 +139,16 @@
             <p>Më shumë rreth qasjes sonë për zhvillim të aplikacioneve...</p>
             <div class="videos">
                 <div class="agile-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZZ_vnqvW4DQ" 
-                        title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <video width="560" height="315" controls>
+                        <source src="videos/Design Systems and Their Benefits.mp4" type="video/mp4">
+                        Shfletuesi juaj nuk e mbështet elementin video.
+                    </video>
                 </div>
                 <div class="design-system-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3TpiNrZlzt4" 
-                    title="YouTube video player" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
+                    <video width="560" height="315" controls>
+                        <source src="videos/What is Agile Methodology.mp4" type="video/mp4">
+                        Shfletuesi juaj nuk e mbështet elementin video.
+                    </video>
                 </div>
             </div>
         </div>
@@ -228,9 +230,9 @@
                             <a class="linkedin" href="https://www.linkedin.com">www.linkedin.com</a>
                         </p>
                     </div>
-                    <form action="">
+                    <form method="">
                         <label>Newsletter Signup:<br>
-                            <input class="email" type="text" name="email" placeholder="Enter Email Here">
+                            <input class="email" type="email" name="email" placeholder="Enter Email Here">
                             <input class="submit" type="submit" value="Submit">
                         </label>
                     </form>

@@ -26,16 +26,19 @@ body {
 .page-description {
     max-width: 55%;
     float: right;
+    padding-right: 3em;
 }
 
 .page-description h1 {
-    margin-top: 3em;
+    margin-top: 5em;
     margin-bottom: 0.5em;
     font-size: 2.5em;
 }
 
 .page-description p {
-    font-size: 1em;
+    font-size: 1.5em;
+    text-align: justify;
+    
 }
 
 .slider {

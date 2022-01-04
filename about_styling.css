@@ -1,3 +1,6 @@
+.header title a {
+    position: initial;
+}
 
 .motto {
     background: radial-gradient(ellipse at top, gray, transparent),
@@ -17,23 +20,25 @@
 }
 
 .svg-triangle svg {
-    max-width: 30%;
+    max-width: 20%;
     float: left;
     fill: midnightblue;
     stroke: black;
     stroke-width: 2;
-    transition: 0.3s;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
 }
 
 .svg-triangle svg:hover {
     fill: maroon;
-    transform: translateX(10em);
-    transition-duration: 1.5s;
-    
+    transform: rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
 }
 
 .company-desc {
-    max-width: 60%;
+    max-width: 70%;
     float: right;
     margin-left: 1.5em;
     margin-right: 3em;
@@ -99,7 +104,6 @@ main {
     list-style: lower-alpha;
     list-style-position: inside;
     font-size: 0.8em;
-
 }
 
 .grid-content ul li {
@@ -175,4 +179,8 @@ thead {
 
 .company-desc a:visited {
     color: purple;
+}
+
+.freelancer-vs-agency {
+    margin-bottom: 3em;
 }

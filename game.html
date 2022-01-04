@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+</head>
+
+<body>
+    <script>
+        var canvas = document.createElement("canvas");
+        b = canvas.getContext("2d");
+
+        canvas.width = 200;
+        canvas.height = 200;
+
+        document.body.appendChild(canvas);
+
+        b.fillStyle = "black";
+        b.fillRect(0, 0, canvas.width, canvas.height);
+
+        var posX = 20;
+        posY = 20;
+        dx = 0;
+        dy = 0;
+
+        setInterval(function() {
+            b.fillStyle = "black";
+            b.fillRect(0, 0, canvas.width, canvas.height);
+            b.fillStyle = "red";
+            b.fillRect(190, 190, 10, 10);
+            posX += dx;
+            posY += dy;
+
+            if (posX > 190) {
+                dx = 0;
+                posX = 190;
+            }
+
+            if (posX < 0) {
+                dx = 0;
+                posX = 0;
+            }
+
+            if (posY > 190) {
+                dy = 0;
+                posY = 190;
+            }
+
+            if (posY < 0) {
+                dy = 0;
+                posY = 0;
+            }
+            if (posY == 190 && posX == 190) {
+
+                alert('Keni arritur ne destinacion!');
+                posY -= 1;
+                posX -= 1;
+            }
+            b.fillStyle = "white";
+            b.fillRect(posX, posY, 10, 10);
+        }, 20)
+        window.addEventListener("keydown", press, true);
+
+        function press(event) {
+            switch (event.keyCode) {
+                case 37:
+                    dx = -1;
+                    dy = 0;
+                    break;
+
+                case 38:
+                    dx = 0;
+                    dy = -1;
+                    break;
+
+                case 39:
+                    dx = 1;
+                    dy = 0;
+                    break;
+
+                case 40:
+                    dx = 0;
+                    dy = 1;
+                    break;
+
+                case 32:
+                    dx = 0;
+                    dy = 0;
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
