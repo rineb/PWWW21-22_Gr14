@@ -27,8 +27,8 @@
 
 .svg-triangle svg:hover {
     fill: maroon;
-    transform: translateX(5em);
-    transition-duration: 2s;
+    transform: translateX(10em);
+    transition-duration: 1.5s;
     
 }
 
@@ -37,7 +37,8 @@
     float: right;
     margin-left: 1.5em;
     margin-right: 3em;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    text-align: justify;
 }
 .grid-header {
     grid-column: 1 / span 3;
@@ -49,16 +50,25 @@
     padding-bottom: 0.5em;
 }
 
+main {
+    width: 100%;
+}
+
 .responsibilities {
     background-color: aliceblue;
     display: inline-grid;
-    grid-template-columns: 30% 30% 30%;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
     grid-gap: 2em;
     padding: 1em;
     box-sizing: border-box;
     justify-content: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left:  5%;
+    padding-right: 5%;
+}
+
+.grid-content {
+    padding-left: 3em;
 }
 
 .grid-content p:first-child {
@@ -83,6 +93,13 @@
     list-style: circle;
     list-style-position: inside;
     font-size: 0.8em;
+}
+
+.grid-content li > ol {
+    list-style: lower-alpha;
+    list-style-position: inside;
+    font-size: 0.8em;
+
 }
 
 .grid-content ul li {
@@ -144,4 +161,18 @@ thead {
 
 .design-system-video {
     padding: 0 2.5em;
+}
+
+.company-desc a {
+    font-size: 1em;
+    position: initial;
+    color: blue;
+}
+
+.company-desc a:hover {
+    text-decoration: none;
+} 
+
+.company-desc a:visited {
+    color: purple;
 }
