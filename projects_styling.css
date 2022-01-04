@@ -108,9 +108,9 @@ flex-direction: row;
 }
 
 .table {
-    padding-top: 80px;
-    padding-left: 50px;
-    float: left;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #statistics thead tr {
